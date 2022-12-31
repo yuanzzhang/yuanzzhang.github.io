@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Data Science Portfolio</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+        <link rel="stylesheet" href="https://unpkg.com/amis@beta/sdk/sdk.css" />
+        <link rel="stylesheet" href="https://unpkg.com/amis@beta/sdk/helper.css" />
+        <style>
+            html,
+            body,
+            .app-wrapper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="root" class="app-wrapper"></div>
+        <script src="https://unpkg.com/amis@beta/sdk/sdk.js"></script>
+        <script type="text/javascript">
+      (function () {
+        let amis = amisRequire('amis/embed');
+        let amisJSON = {
+          "type": "page",
+          "title": "Zhang's Data Science Portfolio",
+          "data": {
+            "items": [
+              {
+                "name": "ICSearch",
+                "summary": "A web search engine under the ICS subdomain.",
+                "type": ["proj", "algo", "struct"],
+                "description": "A web search engine designed for efficient search of pages within the School of Information and Computer Science (ICS) subdomain at the University of California, Irvine. (Indexed data from 2020)\n",
+                "rows": [
+                  {
+                    "type": "website",
+                    "link": "https://icsearch-15.azurewebsites.net/"
+                  }
+                ],
+                "preview": "https://yuanzzhang.github.io/static/images/preview/icsearch.png"
+              },
+              // {
+              //   "name": "Smart Predictor Pro",
+              //   "type": ["proj", "algo"],
+              //   "description": "description" 
+              // },
+              // {
+              //   "name": "Study of Billionaires",
+              //   "type": ["proj", "algo"],
+              //   "description": "123"
+              // },
+              // {
+              //   "name": "Campaign Finance Stories",
+              //   "type": ["proj", "algo"],
+              //   "description": ""
+              // },
+              // {
+              //   "name": "Minesweeper AI",
+              //   "type": ["proj", "algo"],
+              //   "description": ""
+              // },
+              // {
+              //   "name": "Attendance Pro",
+              //   "type": ["proj", "algo"],
+              //   "description": ""
+              // },
+              // {
+              //   "name": "DQbeauty",
+              //   "type": ["proj", "algo"],
+              //   "description": ""
+              // }
+            ]
+          },
+          "body": {
+            "type": "cards",
+            "source": "${items}",
+            "card": {
+              "header": {
+                "title": "${name}",
+                "titleClassName": "text-lg",
+                "description": "${summary}"
+              },
+
+              "body": [
+                {
+                  "type": "mapping",
+                  "name": "${type | asArray}",
+                  "map": {
+                    "proj": {
+                      "type": "tag",
+                      "label": "project",
+                      "displayMode": "rounded",
+                      "color": "active"
+                    },
+                    "algo": {
+                      "type": "tag",
+                      "label": "algorithms",
+                      "displayMode": "rounded",
+                      "color": "#4096ff"
+                    },
+                    "struct": {
+                      "type": "tag",
+                      "label": "data structures",
+                      "displayMode": "rounded",
+                      "color": "#4096ff"
+                    }
+                  }
+                }
+              ],
+              "media": {
+                "type": "image",
+                "url": "${preview}",
+                "position": "bottom"
+              },
+              "itemAction": {
+                "type": "button",
+                "actionType": "dialog",
+                "dialog": {
+                  "title": "${name}",
+                  "body": [
+                    {
+                      "type": "tpl",
+                      "tpl": "${description}"
+                    },
+                    {
+                      "type": "table",
+                      "source": "${rows}",
+                      "className": "m-t-lg",
+                      "columns": [
+                        {
+                          "label": "Type",
+                          "name": "type"
+                        },
+                        {
+                          "label": "Link",
+                          "name": "link",
+                          "type": "link"
+                        }
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "closeOnEsc": true,
+                  "closeOnOutside": true,
+                }
+              }
+            }
+          }
+        };
+        let amisScoped = amis.embed('#root', amisJSON, {locale: 'en-US'});
+      })();
+        </script>
+    </body>
+</html>
