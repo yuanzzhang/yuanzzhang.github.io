@@ -33,9 +33,10 @@
             "items": [
               {
                 "name": "ICSearch",
+                "date": "Nov. 2022 - Dec. 2022",
                 "summary": "A web search engine under the ICS subdomain.",
                 "type": ["proj", "algo", "struct"],
-                "description": "A web search engine designed for efficient search of pages within the School of Information and Computer Science (ICS) subdomain at the University of California, Irvine. (Indexed data from 2020)\n",
+                "description": "A scalable and efficient web search engine was developed and implemented using Python. An index with caching on over 55,000 web pages (crawled in 2020) under the Information and Computer Science (ICS) subdomain was constructed to improve query response times. The project also included the design and deployment of a user-friendly web interface using Flask and Azure Web Apps.",
                 "preview": "https://yuanzzhang.github.io/static/icsearch/preview.png",
                 "rows": [
                   {
@@ -46,9 +47,10 @@
               },
               {
                 "name": "Smart Predictor Pro",
+                "date": "Nov. 2021 - Dec. 2021",
                 "summary": "A machine learning project for predicting customer churn behavior.",
                 "type": ["proj", "ml"],
-                "description": "In this project, we conducted a machine learning study on customer analytics data to predict customer behavior, such as churn. We experimented with various classifiers and tuned their hyperparameters to improve model accuracy. We were able to achieve a strong performance, placing 32nd out of 101 teams in a Kaggle competition. This project was completed in a team of 2.",
+                "description": "In this project, a machine learning study was conducted on customer analytics data to predict customer behavior, such as churn. Various classifiers were experimented with and their hyperparameters were tuned to improve model accuracy. The resulting model achieved a strong performance, ranking 32nd out of 101 teams in a Kaggle competition. This project was completed in a team of 2.",
                 "preview": "https://yuanzzhang.github.io/static/spp/preview.png",
                 "rows": [
                   {
@@ -65,11 +67,28 @@
                   }
                 ]
               },
-              // {
-              //   "name": "Study of Billionaires",
-              //   "type": ["proj", "algo"],
-              //   "description": "123"
-              // },
+              {
+                "name": "Study of Billionaires",
+                "date": "May 2021 - June 2021",
+                "summary": "An exploratory data analysis of billionaire data",
+                "type": ["proj", "analysis", "dataviz", "stats"],
+                "description": "This project analyzed the Forbes World's Billionaires lists from 1996-2014. The goal was to identify factors influencing the rank of billionaires based on their income. The analysis included a simple linear regression of the relationship between age and wealth, and a randomization test on the difference in mean wealth between male and female billionaires in 2014.",
+                "preview": "https://yuanzzhang.github.io/static/billionaires/preview.png",
+                "rows": [
+                  {
+                    "type": "slides",
+                    "link": "https://yuanzzhang.github.io/static/billionaires/report.pdf"
+                  },
+                  {
+                    "type": "video",
+                    "link": "https://drive.google.com/file/d/1_jV6IqtqNgBcwnWkMZOnaoa9zYZsjsvl/view"
+                  },
+                  {
+                    "type": "GitHub repository",
+                    "link": "https://github.com/YuanZzhang/EDA-billionaires"
+                  }
+                ]
+              },
               // {
               //   "name": "Campaign Finance Stories",
               //   "type": ["proj", "algo"],
@@ -99,6 +118,8 @@
               "header": {
                 "title": "${name}",
                 "titleClassName": "text-lg",
+                "subTitle": "${date}",
+                "subTitleClassName": "text-sm m-b-xs",
                 "description": "${summary}"
               },
 
@@ -128,6 +149,24 @@
                     "ml": {
                       "type": "tag",
                       "label": "machine learning",
+                      "displayMode": "rounded",
+                      "color": "#4096ff"
+                    },
+                    "analysis": {
+                      "type": "tag",
+                      "label": "data analysis",
+                      "displayMode": "rounded",
+                      "color": "#4096ff"
+                    },
+                    "dataviz": {
+                      "type": "tag",
+                      "label": "data visualization",
+                      "displayMode": "rounded",
+                      "color": "#4096ff"
+                    },
+                    "stats": {
+                      "type": "tag",
+                      "label": "statistics",
                       "displayMode": "rounded",
                       "color": "#4096ff"
                     }
