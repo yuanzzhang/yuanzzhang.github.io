@@ -37,7 +37,6 @@
                 "summary": "A web search engine under the ICS subdomain.",
                 "type": ["proj", "algo", "struct"],
                 "description": "A scalable and efficient web search engine was developed and implemented using Python. An index with caching on over 55,000 web pages (crawled in 2020) under the Information and Computer Science (ICS) subdomain was constructed to improve query response times. The project also included the design and deployment of a user-friendly web interface using Flask and Azure Web Apps.",
-                "preview": "https://yuanzzhang.github.io/static/icsearch/preview.png",
                 "rows": [
                   {
                     "type": "website",
@@ -51,7 +50,6 @@
                 "summary": "A machine learning project for predicting customer churn behavior.",
                 "type": ["proj", "ml"],
                 "description": "In this project, a machine learning study was conducted on customer analytics data to predict customer behavior, such as churn. Various classifiers were experimented with and their hyperparameters were tuned to improve model accuracy. The resulting model achieved a strong performance, ranking 32nd out of 101 teams in a Kaggle competition. This project was completed in a team of 2.",
-                "preview": "https://yuanzzhang.github.io/static/spp/preview.png",
                 "rows": [
                   {
                     "type": "report",
@@ -70,14 +68,13 @@
               {
                 "name": "Study of Billionaires",
                 "date": "May 2021 - June 2021",
-                "summary": "An exploratory data analysis of billionaire data",
+                "summary": "An exploratory data analysis of billionaire data.",
                 "type": ["proj", "analysis", "dataviz", "stats"],
                 "description": "This project analyzed the Forbes World's Billionaires lists from 1996-2014. The goal was to identify factors influencing the rank of billionaires based on their income. The analysis included a simple linear regression of the relationship between age and wealth, and a randomization test on the difference in mean wealth between male and female billionaires in 2014.",
-                "preview": "https://yuanzzhang.github.io/static/billionaires/preview.png",
                 "rows": [
                   {
                     "type": "slides",
-                    "link": "https://yuanzzhang.github.io/static/billionaires/report.pdf"
+                    "link": "https://yuanzzhang.github.io/static/billionaires/slides.pdf"
                   },
                   {
                     "type": "video",
@@ -173,11 +170,6 @@
                   }
                 }
               ],
-              "media": {
-                "type": "image",
-                "url": "${preview}",
-                "position": "bottom"
-              },
               "itemAction": {
                 "type": "button",
                 "actionType": "dialog",
@@ -205,7 +197,13 @@
                       ]
                     }
                   ],
-                  "actions": [],
+                  "actions": [
+                    {
+                      "type": "button",
+                      "actionType": "close",
+                      "label": "Close"
+                    }
+                  ],
                   "closeOnEsc": true,
                   "closeOnOutside": true,
                 }
